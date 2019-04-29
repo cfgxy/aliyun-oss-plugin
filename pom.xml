@@ -8,7 +8,7 @@
 		<version>3.42</version> <!-- or whatever the newest version available is -->
 		<relativePath />
 	</parent>
-	<version>0.6</version>
+	<version>0.6.1</version>
 	<packaging>hpi</packaging>
 	<name>Aliyun OSS Plugin for Jenkins</name>
 	<description>Uploads build artifacts or downloads build dependencies using aliyun oss storage</description>
@@ -16,8 +16,8 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<jenkins.version>2.164.1</jenkins.version>
-		<java.level>7</java.level>
+		<jenkins.version>2.150.2</jenkins.version>
+		<java.level>8</java.level>
 	</properties>
 
 	<licenses>
@@ -41,19 +41,6 @@
 			<artifactId>aliyun-sdk-oss</artifactId>
 			<version>2.0.2</version>
 		</dependency>
-		<dependency>
-			<groupId>commons-lang</groupId>
-			<artifactId>commons-lang</artifactId>
-			<version>2.3</version>
-		</dependency>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.jenkins-ci.main</groupId>
-			<artifactId>jenkins-test-harness</artifactId>
-		</dependency>
 	</dependencies>
 
 	<repositories>
@@ -69,16 +56,6 @@
 			<url>http://repo.jenkins-ci.org/public/</url>
 		</pluginRepository>
 	</pluginRepositories>
-
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-release-plugin</artifactId>
-				<version>2.5</version>
-			</plugin>
-		</plugins>
-	</build>
 	
 	<distributionManagement>
 		<repository>

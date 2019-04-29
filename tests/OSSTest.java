@@ -13,11 +13,11 @@ public class OSSTest {
 
     @Test
     public void test() throws Exception {
-        final String command = "touch 1";
+        final String command = "mkdir release; touch release/platform.phar";
 
-        AliyunOSSPublisher publisher = new AliyunOSSPublisher("bucket-name", "1", "dev");
-        publisher.getDescriptor().setAliyunAccessKey("AccessKey");
-        publisher.getDescriptor().setAliyunSecretKey("SecretKey");
+        AliyunOSSPublisher publisher = new AliyunOSSPublisher("xxx", "release/*.jar", "dev/xxx");
+        publisher.getDescriptor().setAliyunAccessKey("xxx");
+        publisher.getDescriptor().setAliyunSecretKey("xxx");
         publisher.getDescriptor().setAliyunEndPointSuffix("oss-cn-hangzhou.aliyuncs.com");
 
         // Create a new freestyle project with a unique name, with an "Execute shell" build step;
